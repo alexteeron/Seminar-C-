@@ -10,7 +10,21 @@
 
 System.Random numSintezator = new System.Random();
 
+//char[] digits = numSintezator.Next(100, 1000).ToString().ToCharArray();
+// Console.WriteLine(digits);
+// char[] res = {digits[0], digits[2]};
+// Console.WriteLine(res);
+
+System.Random newNum = new System.Random();
+int nam3 = newNum.Next(100,1000);
+Console.WriteLine(nam3);
+int a = nam3/100;
+int b = nam3%10;
+int combo = a*10+b;
+Console.WriteLine(combo);
+
 char[] digits = numSintezator.Next(100, 1000).ToString().ToCharArray();
 Console.WriteLine(digits);
 char[] res = {digits[0], digits[2]};
 Console.WriteLine(res);
+
