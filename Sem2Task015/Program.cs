@@ -65,3 +65,25 @@ if (NotDay(weekDay))
         Console.WriteLine("надо работать");
     }
 }
+
+// задание со звездочкой*
+Dictionary<int,string> deysOfWeek =new Dictionary<int,string>(); //Работа со славарем, создаем словарь Dictionary
+deysOfWeek.Add(1, "будний день");                                //заполнили словарь   
+deysOfWeek.Add(2, "будний день");
+deysOfWeek.Add(3, "будний день");
+deysOfWeek.Add(4, "будний день");
+deysOfWeek.Add(5, "будний день");
+deysOfWeek.Add(6, "выходной день");
+deysOfWeek.Add(7, "выходной день");
+
+Console.Write("введите день недели > ");
+int day = int.Parse(Console.ReadLine()??"0");
+
+if (deysOfWeek.ContainsKey(day))     // проверка и вывод результата
+{
+    Console.WriteLine(deysOfWeek[day]);
+}
+else
+{
+    Console.WriteLine("не день недели");
+}
