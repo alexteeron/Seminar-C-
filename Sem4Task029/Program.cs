@@ -52,7 +52,7 @@ void PrintName(string a, string b)
 string[] NameRandom(string[] name)
 {
     string.Split(new char[name] { ' ', ',' });
-    string[] res = new Random().Next(1,name.Length+1);
+    string[] res = new Random().Next(0,2);
     return res[N];
 }
 string name = ReadDataName("введите имена : ");

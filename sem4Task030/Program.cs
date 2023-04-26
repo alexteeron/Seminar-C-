@@ -1,7 +1,7 @@
 ﻿// Задача №30
 // напишите программу которая выдает массив 
 // заполненный случайными числами(0,1)
-
+Console.Clear();
 int ReadData(string msg)  //ввод тданных
 {
     Console.WriteLine(msg);
@@ -11,7 +11,7 @@ int ReadData(string msg)  //ввод тданных
 
 void Print1DArrey(int[] arr) //вывод данных
 {                            //создаем тело в которое положим данные
-    Console.Write("["); Console.Clear();
+    Console.Write("["); 
 
 
     for (int i = 0; i < arr.Length - 1; i++)
