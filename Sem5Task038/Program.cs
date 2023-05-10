@@ -15,7 +15,7 @@ double[] Gen1DArreyRnd(int len)//метод создания массива с �
     double[] res = new double[len];
     for (int i = 0; i < len; i++)
     {
-        res[i] = new Random().NextDouble() * 100;
+        res[i] = new Random().Next(10, 99) + new Random().NextDouble(); //new Random().NextDouble()*100;
     }
     return res;
 }
@@ -52,8 +52,8 @@ void SortInputMetod(double[] arr)
         j = i;
         while (j > 0 && arr[j - 1] > input)
         {
-            if(arr[i]>arr[j])max=arr[i];
-            if(arr[j]>arr[i])max=arr[j];
+            if (arr[i] > arr[j]) max = arr[i];
+            if (arr[j] > arr[i]) max = arr[j];
             double temp = arr[j];
             arr[j] = arr[j - 1];
             arr[j - 1] = temp;

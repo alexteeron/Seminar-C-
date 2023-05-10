@@ -55,11 +55,11 @@ int[] BubleSort(int[] arr)//метод сортировки пузырьком
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
-            
+
         }
-        
+
     }
-    bublSort=arr;
+    bublSort = arr;
     return bublSort;
 }
 int[] CountSortMetod(int[] arr)//метод сортировки подсчетом
@@ -77,6 +77,25 @@ int[] CountSortMetod(int[] arr)//метод сортировки подсчет�
     }
     return sortAr;
 }
+void CountingSort(int[] arr)// метод сортировки подсчетом, самый быстрый
+{
+    int max = arr.Max();
+    int min = arr.Min();
+    int[] count = new int[max - min + 1];
+    int z = 0;
+    for (int i = 0; i < count.Length; i++)
+    {
+        count[i] = 0;
+    }
+    for (int i = min; i <= max; i++)
+    {
+        while (count[i - min]-- > 0)
+        {
+            arr[z] = i;
+            z++;
+        }
+    }
+}
 int len = ReadData("введите длину массива : ");
 int[] arrey = Gen1DArreyRnd(len);
 
@@ -89,6 +108,11 @@ DateTime d2 = DateTime.Now;
 int[] sortAr = CountSortMetod(arrey);
 Console.WriteLine(DateTime.Now - d2);
 
-Print1DArrey(bublSort);
-Print1DArrey(sortAr);
+DateTime d3 = DateTime.Now;
+CountingSort(arrey);
+Console.WriteLine(DateTime.Now - d3);
+
+// Print1DArrey(bublSort);
+// Print1DArrey(sortAr);
+// Print1DArrey(arrey);
 Console.WriteLine("количество четных чисел в массиве : " + QuantPosElem(arrey));
